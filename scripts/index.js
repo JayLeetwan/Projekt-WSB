@@ -1,9 +1,3 @@
-var users = {
-  fullName: "John Lenon",
-  userName: "JohnyXXX",
-  password: "XXX123"
-};
-
 function logingIn(form) {
   if (form.login.value == users.userName && form.haslo.value == users.password) {
   document.getElementById("stronalogowania").style.display = "none";
