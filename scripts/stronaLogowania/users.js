@@ -8,6 +8,11 @@ var users = [
     fullName: "Zbigniew S.",
     userName: "zbigniew Stonoga",
     password: "stonoga"
+  },
+  {
+    fullName: "Zbigniew Ziobro.",
+    userName: "zbigniew Ziobro",
+    password: "loveYarek"
   }
 ]
   

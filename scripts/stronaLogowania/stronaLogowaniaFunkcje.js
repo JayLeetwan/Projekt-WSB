@@ -1,19 +1,20 @@
 function checkCredentials(userName, password, usersTable) {
-    console.log(XXX);
-    for (i=0; usersTable.length; i++) {
-        console.log(userName)
+    console.log('dlugosc tablicy: ' + usersTable.length);
+    console.log(users)
+    for (i=0;i < usersTable.length; i++) {
+        console.log(usersTable[i].userName)
+        if(userName === usersTable[i].userName & password === usersTable[i].password) {
+            return true
+        }
     }
+    return false
 }
 
 function logingIn(form) {
-    console.log(XXX);
-    checkCredentials(form.login.value, form.haslo.value, users);
-    console.log(XXX);
-    if (form.login.value == users.userName && form.haslo.value == users.password) {
-    document.getElementById("stronalogowania").style.display = "none";
-    } else {
-    alert("Login or password is not correct!")
-    }
-    }
 
-  
+    if (checkCredentials(form.login.value, form.haslo.value, users)) {
+        document.getElementById("stronalogowania").style.display = "none";
+    } else {
+        alert("Login or password is not correct!")
+    }
+}
