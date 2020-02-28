@@ -1,6 +1,4 @@
 function checkCredentials(userName, password, usersTable) {
-    console.log('dlugosc tablicy: ' + usersTable.length);
-    console.log(users)
     for (i=0;i < usersTable.length; i++) {
         console.log(usersTable[i].userName)
         if(userName === usersTable[i].userName & password === usersTable[i].password) {

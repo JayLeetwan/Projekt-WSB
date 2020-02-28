@@ -13,6 +13,11 @@ var users = [
     fullName: "Zbigniew Ziobro.",
     userName: "zbigniew Ziobro",
     password: "loveYarek"
+  },
+  {
+    fullName: "Janusz koran Mekke.",
+    userName: "1",
+    password: "1"
   }
 ]
   
