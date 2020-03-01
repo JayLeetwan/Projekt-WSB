@@ -1,24 +1,3 @@
-
-function lotWDwieStrony() {
-  var checkBox = document.getElementById("wteinazad");
-  var text = document.getElementById("FinishDate");
-  if (checkBox.checked == true) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
-
-function funkcjaDataWylotu() {
-  var x = document.getElementById("myDate").value;
-  document.getElementById("dataWylotu").innerHTML = x;
-}
-
-function funkcjaDataPowrotu() {
-  var x = document.getElementById("myDate").value;
-  document.getElementById("dataPowrotu").innerHTML = x;
-}
-
 var samolot = $("#samolot");
 for (var i = 0; i < 15; i++) {
   var descr = $('<tr><td><label></label></td><td colspan="2">' +
