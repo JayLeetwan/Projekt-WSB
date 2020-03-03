@@ -8,6 +8,8 @@
     <title>JayAir</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scripts/jquery.scrollTo.min.js"></script>
     <script>
         jQuery(function ($) {
@@ -20,10 +22,6 @@
             });
         });
     </script>
-
-
-
-
 </head>
 
 <body>
@@ -79,17 +77,16 @@
 
                         <div><label><input type="checkbox" id="roundTripFlight" onclick="lotWDwieStrony()"> Lot w dwie
                                 strony </label></div>
+                        <p>Od: <input type="text" id="dateFrom"></p>
+                        <!-- <p>Alert the value: <button id="return">Alert!</button> -->
+                        <!-- <p>Od</p>
+                        <input type="date" id="dateFromContainer" class="dateContainer" min="2018-03-01" max="2022-03-01"> -->
 
-                        <p>Od</p>
-                        <input type="date" id="dateFromContainer">
-                        <button onclick="funkcjaDataWylotu()">Wybierz datę</button>
-                        <p id="dataWylotu"></p>
 
                         <div id="FinishDate" style="display:none">
-                            <p>Do</p>
-                            <input type="date" id="dateToContainer">
-                            <button onclick="funkcjaDataPowrotu()">Wybierz datę</button>
-                            <p id="dataPowrotu"></p>
+                            <p>Do: <input type="text" id="dateTo"></p>
+                            <!-- <p>Do</p>
+                            <input type="date" id="dateToContainer" class="dateContainer" min="2018-03-01" max="2022-03-01"> -->
                         </div>
                     </fieldset>
                 </div>
