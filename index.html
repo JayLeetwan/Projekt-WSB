@@ -68,6 +68,7 @@
                             <option value="HK">Hong Kong</option>
 
                         </select>
+                        <p id="wrongDestination"></p>
                     </fieldset>
                 </div>
 
@@ -89,8 +90,8 @@
 
                         <legend> Ilość osób </legend>
 
-                        <div><label><input type="number" name="howManyGrownups" value="1"> Ilu dorosłych </label></div>
-                        <div><label><input type="number" name="howManyKids" value="2"> Ile dzieci </label></div>
+                        <div><label><input type="number" name="howManyGrownups" value="1" min="1" max="9"> Ilu dorosłych </label></div>
+                        <div><label><input type="number" name="howManyKids" value="2" min="0" max="9"> Ile dzieci </label></div>
 
 
                     </fieldset>

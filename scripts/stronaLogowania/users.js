@@ -5,13 +5,13 @@ var users = [
     password: "XXX123"
   },
   {
-    fullName: "Zbigniew S.",
-    userName: "zbigniew Stonoga",
+    fullName: "Zbigniew Stonoga",
+    userName: "zbigniewS!",
     password: "stonoga"
   },
   {
     fullName: "Zbigniew Ziobro.",
-    userName: "zbigniew Ziobro",
+    userName: "Ziober",
     password: "loveYarek"
   },
   {
