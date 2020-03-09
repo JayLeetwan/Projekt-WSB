@@ -90,12 +90,12 @@
 
                         <legend> Ilość osób </legend>
 
-                        <div><label><input type="number" name="howManyGrownups" value="1" min="1" max="9"> Ilu dorosłych </label></div>
-                        <div><label><input type="number" name="howManyKids" value="2" min="0" max="9"> Ile dzieci </label></div>
-
+                        <div><label><input type="number" name="howManyGrownups" id="howManyGrownups" value="1" min="1" max="9" onchange="checkPeople()"> Ilu dorosłych </label></div>
+                        <div><label><input type="number" name="howManyChildren" id="howManyChildren" value="0" min="0" max="9" onchange="checkPeople()"> Ile dzieci </label></div>
+                        <p id="infoAboutPassengers"></p>
 
                     </fieldset>
-
+                        
                 </div>
                 <div class="pick">
 
@@ -137,7 +137,8 @@
 
         </div>
     </div>
-    <script type="text/javascript" src="scripts/samolotFunkcje/datyFunkcje.js"></script>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/datyFunkcje.js"></script>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/osoby.js"></script>
     <script type="text/javascript" src="scripts/stronaLogowania/users.js"></script>
     <script type="text/javascript" src="scripts/stronaLogowania/stronaLogowaniaFunkcje.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
