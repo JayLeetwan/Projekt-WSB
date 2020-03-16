@@ -31,6 +31,13 @@ body {
     box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 1);
 }
 
+h3 {
+    font-size: 30px;
+    margin: 0px;
+    line-height: 35px;
+
+}
+
 input[type=text],
 input[type=password] {
     width: 300px;
@@ -69,7 +76,7 @@ input[type=button] {
 }
 
 #loginBtn {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #registerBtn {
@@ -119,11 +126,30 @@ input[type=button]:hover {
     background-color: #0066ff;
 }
 
+#startCity,
+#destinationCity,
+#dateFrom,
+#dateTo,
+#howManyGrownups,
+#howManyChildren
+ {
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 10px;
+}
+
 .pick {
     float: left;
     width: 20%;
 }
 
 fieldset {
-    height: 260px;
+    height: 270px;
 }

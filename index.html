@@ -29,16 +29,12 @@
         <div id="stronalogowania">
             <form name="logowanie">
                 <div class="logowanie">
-                    <h1>JayAir</h1>
-                    <p>Login:
-                        <input class="input" type="text" name="login" placeholder="wpisz e-mail lub login" /></p>
-                    <p>Hasło:
-                        <input class="input" type="password" name="haslo" placeholder="wpisz hasło" /></p>
+                    <h3>Zaloguj się, żeby zarezerwować lot!</h3>
+                    <p>Login:<input class="input" type="text" name="login" placeholder="wpisz e-mail lub login" /></p>
+                    <p>Hasło:<input class="input" type="password" name="haslo" placeholder="wpisz hasło" /></p>
                     <input type="button" id="loginBtn" onclick="logingIn(form)" value="Zaloguj" />
                     <input type="button" id="registerBtn" value="Zarejestruj" />
-                    <br />
                     <input type="button" id="zapomnialemHasla" value="Zapomniałem Hasła" />
-                    <br />
                 </div>
             </form>
         </div>
@@ -47,33 +43,30 @@
             <form name="wyborlotu">
                 <div class="pick">
                     <fieldset>
+
                         <legend> Lotniska </legend>
+
                         <label for="start"> Skąd </label>
-                        <select id="start" name="start">
-
-                            <option value="NY">Nowy York</option>
-                            <option value="WAR">Warszawa</option>
-                            <option value="PN" selected>Poznań</option>
-                            <option value="HK">Hong Kong</option>
-
-                        </select>
-
-
+                            <select id="startCity" onchange="chooseCity()">
+                                <option></option>
+                                <option>Poznań</option>
+                                <option>Warszawa</option>
+                                <option>Nowy Jork</option>
+                                <option>Londyn</option>
+                                <option>Hong Kong</option>
+                            </select>
+                            
                         <label for="destination"> Dokąd </label>
-                        <select id="destination" name="destination">
-
-                            <option value="NY" selected>Nowy York</option>
-                            <option value="WAR">Warszawa</option>
-                            <option value="PN">Poznań</option>
-                            <option value="HK">Hong Kong</option>
-
-                        </select>
-                        <p id="wrongDestination"></p>
+                            <select id="destinationCity" onchange="random_function1()">
+                            </select>
+                            
                     </fieldset>
+                    
                 </div>
-
+                
                 <div class="pick">
                     <fieldset>
+
                         <legend> Data </legend>
 
                         <div><label><input type="checkbox" id="roundTripFlight" onclick="lotWDwieStrony()"> Lot w dwie strony </label></div>
@@ -84,6 +77,7 @@
 
                     </fieldset>
                 </div>
+
                 <div class="pick">
 
                     <fieldset>
@@ -137,6 +131,7 @@
 
         </div>
     </div>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/wyborMiast.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/datyFunkcje.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/osoby.js"></script>
     <script type="text/javascript" src="scripts/stronaLogowania/users.js"></script>
