@@ -1,6 +1,6 @@
 var planes = [
   { 
-    name: "Bombardier"
+    name: "Bombardier CRJ-700"
   },
   {
     name: "Boeing 737"
