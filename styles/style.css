@@ -152,4 +152,25 @@ input[type=button]:hover {
 
 fieldset {
     height: 270px;
+    float: left;
 }
+
+#linkDoWyboruMiejsc {
+    clear: both;
+}
+
+.colD,
+.colC,
+.colB,
+.colA {
+    fill: red;
+  stroke: black;
+}
+
+.colD:hover,
+.colC:hover,
+.colB:hover,
+.colA:hover {
+    fill: green;
+}
+    
