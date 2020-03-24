@@ -173,4 +173,8 @@ fieldset {
 .colA:hover {
     fill: green;
 }
-    
+
+#planePlan {
+    width: 1000px;
+    height: 500px;
+}

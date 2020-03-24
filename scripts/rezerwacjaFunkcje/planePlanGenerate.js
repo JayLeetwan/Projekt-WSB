@@ -19,6 +19,7 @@ function choseSeats() {
   var wayFrom = document.getElementById("startCity").value;
   var wayTo = document.getElementById("destinationCity").value;
   if (wayFrom === "Poznań" || wayFrom === "Warszawa" & wayTo === "Warszawa" || wayTo === "Poznań" ) {
+    document.getElementById('planePlan').src="bombardierPlan.html";
     alert("Index of startCity is: " + wayFrom + ", and index of destinationCity is: " + wayTo);
   }
 }
