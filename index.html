@@ -28,103 +28,74 @@
             </form>
         </div>
         <div id="wyborlotu">
-            <h1>Wybierz swój lot</h1>
-            <form name="wyborlotu">
-                <div class="pick">
-                    <fieldset>
+            <div class="main-section">
+                <div class="main-section__row">
+                    <input type="radio" name="trip">Roundtrip</input>
+                    <input type="radio" name="trip">One way</input>
+                    <input type="radio" name="trip">Multi city</input>
+                </div>
+                <div class="main-section__row">
+                    <label>
 
-                        <legend> Lotniska </legend>
+                        From
+                        <input placeholder="City or airport" />
+                    </label>
+                    <label>
 
-                        <label for="start"> Skąd </label>
-                        <select id="startCity" onchange="chooseCity()">
-                            <option></option>
-                            <option>Poznań</option>
-                            <option>Warszawa</option>
-                            <option>Nowy Jork</option>
-                            <option>Londyn</option>
-                            <option>Hong Kong</option>
+                        Destination
+                        <input placeholder="City or airport" />
+                    </label>
+                </div>
+                <div class="main-section__row">
+                    <label>
+
+                        Start date
+                        <input type="text" id="dateFrom"/>
+                    </label>
+                    <label>
+                    
+                        Return date
+                        <input type="text" id="dateTo"/>
+                    </label>
+                    <label>
+                    
+                        Adults(+18)
+                        <input type="number" name="howManyGrownups" id="howManyGrownups" value="1" min="1" max="9" onchange="checkPeople()"/>
+                    </label>
+                    <label>
+                    
+                        Children
+                        <input type="number" name="howManyChildren" id="howManyChildren" value="0" min="0" max="9" onchange="checkPeople()"/>
+                    </label>
+                </div>
+                <div class="main-section__row">
+                    <label>
+                        Travel class
+                    <select id="travel-class">
+                    <option></option>
+                        <option>Economy</option>
+                        <option>First</option>
+                        <option>Business</option>
+                    </select>
+                    </label>
+                    <label>
+                        Extras
+                        <select id="extras">
+                        <option></option>
+                        <option>Luggage</option>
+                        <option>Lunch</option>
+                        <option>Alcohol</option>
+                        <option>Massage</option>
                         </select>
-
-                        <label for="destination"> Dokąd </label>
-                        <select id="destinationCity" onchange="random_function1()">
-                        </select>
-
-                    </fieldset>
-
+                    </label>
                 </div>
-
-                <div class="pick">
-                    <fieldset>
-
-                        <legend> Data </legend>
-
-                        <div><label><input type="checkbox" id="roundTripFlight" onclick="lotWDwieStrony()"> Lot w dwie
-                                strony </label></div>
-                        <p>Od: <input type="text" id="dateFrom"></p>
-                        <div id="FinishDate" style="display:none">
-                            <p>Do: <input type="text" id="dateTo"></p>
-                        </div>
-
-                    </fieldset>
+                <div class="main-section__row">
+                    <button><a href="bombardierPlan.html">Seats</a></button>
+                    <button id="summary">Submit</button>
                 </div>
-
-                <div class="pick">
-
-                    <fieldset>
-
-                        <legend> Ilość osób </legend>
-
-                        <div><label><input type="number" name="howManyGrownups" id="howManyGrownups" value="1" min="1"
-                                    max="9" onchange="checkPeople()"> Ilu dorosłych </label></div>
-                        <div><label><input type="number" name="howManyChildren" id="howManyChildren" value="0" min="0"
-                                    max="9" onchange="checkPeople()"> Ile dzieci </label></div>
-                        <p id="infoAboutPassengers"></p>
-
-                    </fieldset>
-
-                </div>
-                <div class="pick">
-
-                    <fieldset>
-
-                        <legend> Klasa </legend>
-
-                        <div><label><input type="radio" value="1" name="class" checked> Business </label></div>
-                        <div><label><input type="radio" value="2" name="class"> Pierwsza </label></div>
-                        <div><label><input type="radio" value="3" name="class"> Ekonomiczna </label></div>
-
-                    </fieldset>
-
-                </div>
-                <a id="linkDoWyboruMiejsc" href="#"> <input type="button" onclick="wyborMiejsc(); setHtmlIntoContainer();"
-                        value="Wybierz Miejsca" /> </a>
-            </form>
-        </div>
-
-        <div id="wyborMiejsc" style="display:none;">
-
-            <div id="samolot-plan-kontener" ></div>
-
-            <div class="pick">
-
-                <fieldset>
-
-                    <legend> Dodatkowe usługi </legend>
-
-                    <div><label><input type="checkbox" name="additionalServices" value="1"> Dodatkowy bagaż
-                            główny </label></div>
-                    <div><label><input type="checkbox" name="additionalServices" value="2"> Nielimitowany
-                            alkohol </label></div>
-                    <div><label><input type="checkbox" name="additionalServices" value="3"> Masaż stóp
-                        </label></div>
-
-
-                </fieldset>
-
             </div>
-
         </div>
-        
+
     </div>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/wyborMiast.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/datyFunkcje.js"></script>
@@ -133,6 +104,9 @@
     <script type="text/javascript" src="scripts/stronaLogowania/stronaLogowaniaFunkcje.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/planeTypes.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/planePlanGenerate.js"></script>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/miejsca.js"></script>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/local.js"></script>
+
 </body>
 
 </html>
