@@ -1,7 +1,7 @@
 function checkCredentials(userName, password, usersTable) {
-    for (i=0;i < usersTable.length; i++) {
+    for (i = 0; i < usersTable.length; i++) {
         // console.log(usersTable[i].userName)
-        if(userName === usersTable[i].userName & password === usersTable[i].password) {
+        if (userName === usersTable[i].userName & password === usersTable[i].password) {
             return true
         }
     }
@@ -9,7 +9,8 @@ function checkCredentials(userName, password, usersTable) {
 }
 
 function logingIn(form) {
-    
+    localStorage.clear()
+
     if (checkCredentials(form.login.value, form.haslo.value, users)) {
         document.getElementById("stronalogowania").style.display = "none";
     } else {
@@ -18,9 +19,11 @@ function logingIn(form) {
     setTimeout(logOutAlert, 120000);
     setTimeout(logOut, 180000);
 }
+
 function logOutAlert() {
     window.alert("You are about to be loged out");
 }
+
 function logOut() {
     document.getElementById("stronalogowania").style.display = "block";
 }

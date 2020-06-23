@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <svg id="Bombardier" class="planePlan" width=980 height=480>
+    <div class="main">
+        <svg id="Bombardier" class="planePlan" width=980 height=480>
         <rect id="bombSeat46" class="colD" x=20 y=20 height=20 width=20 rx="5"></rect>
         <rect id="bombSeat47" class="colD" x=50 y=20 height=20 width=20 rx="5"></rect>
         <rect id="bombSeat48" class="colD" x=80 y=20 height=20 width=20 rx="5"></rect>
@@ -85,13 +86,23 @@
         <rect id="bombSeat14" class="colA" x=440 y=150 height=20 width=20 rx="5"></rect>
         <rect id="bombSeat15" class="colA" x=470 y=150 height=20 width=20 rx="5"></rect>
 
+
     </svg>
 
-    <button id="show-all">Podsumowanie</button>
 
-    <div class="result"></div>
 
-    <a href="index.html" id="buttonReturn">SUBMIT</a>
+    </div>
+    <button id="buttonReturn" onclick="myFunction()">Accept seats</button>
+    <script>
+        function myFunction() {
+            alert('After click refresh your browser and next click Reservation Summary');
+        }
+    </script>
+
+    <ul class="result"></ul>
+
+
+    <button id="show-all">Reservation Summary</button>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/miejsca.js"></script>
 
     <!-- <div id="wyborMiejsc" onclick="window.location.hash='buttonReturn'; "></div> -->

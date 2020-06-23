@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JayAir</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -18,95 +18,91 @@
         <div id="stronalogowania">
             <form name="logowanie">
                 <div class="logowanie">
-                    <h3>Zaloguj się, żeby zarezerwować lot!</h3>
-                    <p>Login:<input class="input" type="text" name="login" placeholder="wpisz e-mail lub login" /></p>
-                    <p>Hasło:<input class="input" type="password" name="haslo" placeholder="wpisz hasło" /></p>
-                    <input type="button" id="loginBtn" onclick="logingIn(form)" value="Zaloguj" />
-                    <input type="button" id="registerBtn" value="Zarejestruj" />
-                    <input type="button" id="zapomnialemHasla" value="Zapomniałem Hasła" />
+                    <h3>Log In To Book Your Flight</h3>
+                    <p>
+                        Login:<input class="input" type="text" name="login" placeholder="e-mail or login" />
+                    </p>
+                    <p>
+                        Password:<input class="input" type="password" name="haslo" placeholder="password" />
+                    </p>
+                    <input type="button" id="loginBtn" onclick="logingIn(form)" value="Sign In" />
+                    <input type="button" id="registerBtn" value="Sign Up" />
+                    <input type="button" id="zapomnialemHasla" value="Forgot Password?" />
                 </div>
             </form>
         </div>
         <div id="wyborlotu">
             <div class="main-section">
                 <div class="main-section__row">
-                    <input type="radio" name="trip">Roundtrip</input>
-                    <input type="radio" name="trip">One way</input>
-                    <input type="radio" name="trip">Multi city</input>
+                    <label>
+              From
+              <input id="flyFrom" placeholder="City or airport" />
+            </label>
+                    <label>
+              Destination
+              <input id="flyTo" placeholder="City or airport" />
+            </label>
                 </div>
                 <div class="main-section__row">
                     <label>
+              Flight Date
+              <input type="text" id="flightDate" />
+            </label>
 
-                        From
-                        <input placeholder="City or airport" />
-                    </label>
                     <label>
-
-                        Destination
-                        <input placeholder="City or airport" />
-                    </label>
+              Adults(+18)
+              <input
+                type="number"
+                name="howManyGrownups"
+                id="howManyGrownups"
+              />
+            </label>
+                    <label>
+              Children
+              <input
+                type="number"
+                name="howManyChildren"
+                id="howManyChildren"
+              />
+            </label>
                 </div>
                 <div class="main-section__row">
                     <label>
-
-                        Start date
-                        <input type="text" id="dateFrom"/>
-                    </label>
+              Travel class
+              <select id="travel-class" onchange="getSelected('travel-class')">
+                <option></option>
+                <option value="Economy">Economy</option>
+                <option value="First">First</option>
+                <option value="Business">Business</option>
+              </select>
+            </label>
                     <label>
-                    
-                        Return date
-                        <input type="text" id="dateTo"/>
-                    </label>
-                    <label>
-                    
-                        Adults(+18)
-                        <input type="number" name="howManyGrownups" id="howManyGrownups" value="1" min="1" max="9" onchange="checkPeople()"/>
-                    </label>
-                    <label>
-                    
-                        Children
-                        <input type="number" name="howManyChildren" id="howManyChildren" value="0" min="0" max="9" onchange="checkPeople()"/>
-                    </label>
+              Extras
+              <select id="extras" onchange="getSelected('extras')">
+                <option></option>
+                <option>Luggage</option>
+                <option>Lunch</option>
+                <option>Alcohol</option>
+                <option>Massage</option>
+              </select>
+            </label>
                 </div>
                 <div class="main-section__row">
-                    <label>
-                        Travel class
-                    <select id="travel-class">
-                    <option></option>
-                        <option>Economy</option>
-                        <option>First</option>
-                        <option>Business</option>
-                    </select>
-                    </label>
-                    <label>
-                        Extras
-                        <select id="extras">
-                        <option></option>
-                        <option>Luggage</option>
-                        <option>Lunch</option>
-                        <option>Alcohol</option>
-                        <option>Massage</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="main-section__row">
-                    <button><a href="bombardierPlan.html">Seats</a></button>
-                    <button id="summary">Submit</button>
+                    <button><a href="bombardierPlan.html">Next</a></button>
                 </div>
             </div>
         </div>
-
     </div>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/wyborMiast.js"></script>
-    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/datyFunkcje.js"></script>
-    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/osoby.js"></script>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/datePicker.js"></script>
     <script type="text/javascript" src="scripts/stronaLogowania/users.js"></script>
     <script type="text/javascript" src="scripts/stronaLogowania/stronaLogowaniaFunkcje.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/planeTypes.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/planePlanGenerate.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/miejsca.js"></script>
     <script type="text/javascript" src="scripts/rezerwacjaFunkcje/local.js"></script>
-
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/reservePlane.js"></script>
+    <script type="text/javascript" src="scripts/rezerwacjaFunkcje/getSelected.js"></script>
 </body>
 
 </html>
